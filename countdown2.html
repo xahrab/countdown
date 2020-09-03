@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id= "div">
+<h1> 0 </h1>
+<button id ='button'>click me</button>
+</div>
+</body>
+
+<script>
+if(!localStorage.getItem('counter')){
+    localStorage.setItem('counter',0);
+}
+
+function count(){
+    let counter = localStorage.getItem('counter');
+    counter++;
+    document.querySelector('h1').innerHTML = counter;
+    localStorage.setItem('counter', counter);
+}
+
+document.addEventListener('DOMCounterLoaded', function(){
+    document.querySelector('h1').innerHTML = localStorage.getItem('counter')
+    document.querySelector('button').onClick = count;
+});
+</script>
+</html>
