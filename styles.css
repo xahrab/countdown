@@ -5,10 +5,12 @@
     margin:20px;
     width:60px;
     margin-left:600px;
+    display:flex;
+    flex-wrap:wrap;   
 }
 
 #button{
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50; 
     border: none;
     color: white;
     padding: 15px 32px;
